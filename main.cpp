@@ -1,15 +1,23 @@
-// HICOMMIT TEMPLATE FOR C++
-#include <bits/stdc++.h>
-
+#include <iostream>
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    int n;
+    cin >> n;
 
-    /*
-        Your code goes here. Happy coding!
-    */
+    long long fib[46];
+    fib[0] = 0;
+    fib[1] = 1;
 
+    for (int i = 2; i <= n; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+    }
+
+    long long sum = 0;
+    for (int i = 0; i <= n; i++) {
+        sum += fib[i];
+    }
+
+    cout << sum << endl;
     return 0;
 }
