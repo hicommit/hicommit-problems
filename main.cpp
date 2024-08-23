@@ -22,7 +22,7 @@ int main() {
     if (isPrime(n)) {
         cout << "YES" << endl;
     } else {
-        cout << "NO" << endl;
+        cout << "NO" << endll;
     }
 
     return 0;
