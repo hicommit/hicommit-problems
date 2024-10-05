@@ -6,7 +6,7 @@ int main() {
   scanf("%d", &n);
   while(n--){
     scanf("%d", &temp);
-    sumOfEven += !(temp % 2);
+    sumOfEven += 1 - (temp % 2 == 0);
   }
 
   printf("%d", sumOfEven);
