@@ -1,15 +1,18 @@
-// HICOMMIT TEMPLATE FOR C++
-#include <bits/stdc++.h>
-
+#include <iostream>
 using namespace std;
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    int N;
+    cin >> N;
+    int K = 500000 - N;
+    int bills[] = {100000, 50000, 10000, 5000, 1000};
+    int count = 0;
 
-    /*
-        Your code goes here. Happy coding!
-    */
+    for (int i = 0; i < 5; i++) {
+        count += K / bills[i];
+        K %= bills[i];
+    }
 
+    cout << count << endl;
     return 0;
 }
